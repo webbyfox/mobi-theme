@@ -69,7 +69,7 @@
 			<!-- AddThis Button END -->
 	
             <?php echo $this->getChildHtml('product_type_data') ?>
-            <span itemprop="offers" itemtype="http://schema.org/Offer"><?php echo $this->getTierPriceHtml() ?></span>
+            <?php echo $this->getTierPriceHtml() ?>
             <?php echo $this->getChildHtml('extrahint') ?>
 
             <?php if ($_product->isSaleable() && $this->hasOptions()):?>
