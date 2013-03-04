@@ -43,8 +43,9 @@
         <div class="no-display">
             <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
             <input type="hidden" name="related_product" id="related-products-field" value="" />
+			<span itemprop="manufacturer">MobiFox</span>
         </div>
-
+ 
         <div class="product-shop">
             <div class="product-name">
                 <h1 itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
