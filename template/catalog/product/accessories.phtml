@@ -1,0 +1,23 @@
+<?php 
+	$str_currecny_code	=	Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol(); 
+	$str_mobile_url		=	Mage::getModel("catalog/category")->load(56)->getUrl();
+	$str_computer_url	=	Mage::getModel("catalog/category")->load(64)->getUrl();
+?> 
+<div class="accessories">
+  <div class="accessories_products_head"><?php echo $this->__('Accessories') ?></div>
+  <div class="category-products">
+  	<div class="div1">
+		<h2><?php echo $this->__('Mobile Charger') ?></h2>
+		<div class="img"><img src="<?=$this->getSkinUrl('images/mobile_chargers.jpg')?>"  /></div>
+		<div class="starting"><?php echo $this->__('Starts From') ?> <?=$str_currecny_code?> <?php echo $this->__('1.99') ?></div>
+		<div class="viewmore"><a href="<?=$str_mobile_url?>"><?php echo $this->__('View More') ?></a></div>
+	</div>
+  	<div class="div2">
+		<h2><?php echo $this->__('Head Phones') ?></h2>
+		<div class="img"><img src="<?=$this->getSkinUrl('images/headphones.jpg')?>"  /></div>
+		<div class="starting"><?php echo $this->__('Starts From') ?> <?=$str_currecny_code?> <?php echo $this->__('1.99') ?></div>
+		<div class="viewmore"><a href="<?=$str_computer_url?>"><?php echo $this->__('View More') ?></a></div>		
+	</div>
+    <div class="clear_both"></div>
+  </div>
+</div>
