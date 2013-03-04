@@ -69,7 +69,7 @@
 			<!-- AddThis Button END -->
 	
             <?php echo $this->getChildHtml('product_type_data') ?>
-            <span itemprop="price"><?php echo $this->getTierPriceHtml() ?></span>
+            <?php echo $this->getTierPriceHtml() ?>
             <?php echo $this->getChildHtml('extrahint') ?>
 
             <?php if ($_product->isSaleable() && $this->hasOptions()):?>
