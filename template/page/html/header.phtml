@@ -44,24 +44,24 @@ $str_currecny_code	=	Mage::app()->getLocale()->currency(Mage::app()->getStore()-
 <div class="header-container">
   <div class="header">
     <?php if ($this->getIsHomePage()):?>
-    <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+    <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img title="mobile accessories" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
     <?php else:?>
-    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" title="mobile accessories" alt="<?php echo $this->getLogoAlt() ?>" /></a>
     <?php endif?>
     <div class="quick-access">
       <p class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></p>
       <?php echo $this->getChildHtml('topLinks') ?> <?php echo $this->getChildHtml('store_language') ?>
       <?php //echo $storePhone = Mage::getStoreConfig('general/store_information/phone');?>
-      <div class="toptelephone"><img src="<?=$this->getSkinUrl('images/orange_phone.jpg')?>" alt="contact us" />
+      <div class="toptelephone"><img src="<?=$this->getSkinUrl('images/orange_phone.jpg')?>" title="contact us" alt="contact us" />
         <label class="callus"><?php echo $this->__('Call Us:') ?> </label>
         <label class="phonenumber"><?php echo $this->__('0203-556-7436') ?></label>
       </div>
     </div>
 	<?php $str_cart	=	$this->getUrl('checkout/cart'); ?>
     <div class="uk_cart">
-      <div><img src="<?=$this->getSkinUrl('images/free_uk_delivery.jpg')?>" alt="free uk delivery" /></div>
+      <div><img src="<?=$this->getSkinUrl('images/free_uk_delivery.jpg')?>" alt="free uk delivery" title="free uk delivery" /></div>
       <div class="shoppingcart">
-	  	<div class="cartImage"><a href="<?=$str_cart?>"><img src="<?=$this->getSkinUrl('images/transparent.png')?>"  width="37" height="31" alt="add to cart"/></a></div>
+	  	<div class="cartImage"><a href="<?=$str_cart?>"><img src="<?=$this->getSkinUrl('images/transparent.png')?>"  width="37" height="31" title="add to cart" alt="add to cart"/></a></div>
 	  	<?php if($top_price > 0 ) $top_price	=	__(number_format($top_price,2)); ?>
 	  	<div class="cart_info"><?=$top_cart;?> <a href="<?=$str_cart?>"><?php echo $this->__('item(s)') ?></a>   :<?=$str_currecny_code?><?=$top_price?></div>
 	  </div>
