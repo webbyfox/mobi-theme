@@ -38,17 +38,17 @@
 </script>
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 <div class="product-view" itemscope itemtype="http://schema.org/Product">
-    <div class="product-essential">
+    <div class="product-essential" >
     <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
         <div class="no-display">
             <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
             <input type="hidden" name="related_product" id="related-products-field" value="" />
-			<span itemprop="manufacturer">MobiFox</span>
+			
         </div>
  
         <div class="product-shop">
-            <div class="product-name">
-                <h1 itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+            <div class="product-name" >
+                <h1 itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>                <meta itemprop="manufacturer" content="MobiFox"/>
             </div>
 
             <?php if ($this->canEmailToFriend()): ?>
@@ -158,13 +158,13 @@
     </script>
     </div>
 
-    <div class="product-collateral" itemprop="description">
+    <div >
 <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
-        <div class="box-collateral <?php echo "box-{$alias}"?>">
+        <div class="product-collateral" class="box-collateral <?php echo "box-{$alias}"?>">
             <?php if ($title = $this->getChildData($alias, 'title')):?>
             <h2><?php echo $this->escapeHtml($title); ?></h2>
             <?php endif;?>
-            <?php echo $html; ?>
+            <span itemprop="description" ><?php echo $html; ?></span>
         </div>
 <?php endforeach;?>
         <?php echo $this->getChildHtml('upsell_products') ?>
